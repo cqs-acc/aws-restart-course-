@@ -1,11 +1,11 @@
-##### **AWS re/Start Course**
+#### **AWS re/Start Course**
 
 This repository contains structured learning materials, demo scripts, and lesson notes for the AWS re/Start Program. It’s designed to guide learners through essential topics in Linux, Bash scripting, Python programming, Databases, and AWS cloud fundamentals.
 
 Each module includes practical labs, code examples, and hands-on exercises to help learners build real-world cloud and system administration skills.
 
 
-##### **Course Structure**
+#### **Course Structure**
 ```python
 aws-restart-course/
 ├── 01_linux_basics/
@@ -26,7 +26,7 @@ aws-restart-course/
 
 **05_aws_labs:** Cloud labs and project-based tasks using AWS services
 
-##### **Purpose**
+#### **Purpose**
 
 This repository helps learners and instructors:
 
