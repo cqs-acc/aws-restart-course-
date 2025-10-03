@@ -63,7 +63,7 @@ SELECT * FROM city;
 Here's what happens internally:
  1. **FROM city** ==> SQL locates the `city` table and loads all rows into memory. 
  2. **SELECT `*`** ==> It then selects all columns from the table ( `*` means every column).
- 3. **Result displayed ==> The final output is shown to you. 
+ 3. **Result displayed** ==> The final output is shown to you. 
 
  **Very important:**
  Althouh we *write* `SELECT` first, SQL *executes* `FROM` first - because SQL must know **where** the data is coming from before it can **select** anything! 
