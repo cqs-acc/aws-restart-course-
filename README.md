@@ -35,3 +35,32 @@ Access lesson notes and lab materials easily
 Track changes and updates for each cohort
 
 Practice foundational cloud and DevOps skills
+
+
+## **Real order of SQL execution (logical order)**
+
+When you run a query like:
+```sql
+SELECT * 
+FROM city
+WHERE population > 500000
+ORDER BY city_name;
+```
+SQL doesn't start with the `SELECT`. 
+It actually processes the clauses in this logical order: 
+
+```markdown
+| **Step** | **Clause** | **What happens** |
+|------|---------|--------------|
+| 1 | **FROM** | SQL starts by locating and loading the table(s) — here, it fetches data from `city`. |
+| 2 | **WHERE** | It filters the rows that meet the condition (e.g., only cities with `population > 500000`). |
+| 3 | **GROUP BY** *(if present)* | SQL groups rows that have the same values in specified columns. |
+| 4 | **HAVING** *(if present)* | It filters the groups formed in the previous step. |
+| 5 | **SELECT** | Only now does SQL pick the columns (or expressions) you asked for. |
+| 6 | **ORDER BY** | Finally, it sorts the result set in the requested order. |
+| 7 | **LIMIT / OFFSET** *(if present)* | SQL may restrict the number of rows returned. |
+```
+
+
+
+
