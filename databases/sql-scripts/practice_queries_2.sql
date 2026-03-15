@@ -12,6 +12,22 @@ select productCode, productName, quantityInStock
 from products
 where productName regexp 'F[eo]'; -- Fe, Fo, Fa, or fe, fo, fa
 
+------------------------------------------------
+-- Exploring `REXGEXP` conditional searching
+------------------------------------------------
+
+select productCode, productName, quantityInStock
+from products
+where productName regexp '^F';  -- `^` tells `regexp` to select productName that starts with F. 
+
+select productCode, productName, quantityInStock
+from products
+where productName regexp 'Coupe$'; -- `$` tells regexp to select productName that ends with Coupe
+
+select productCode, productName, quantityInStock
+from products
+where productName regexp 'ab';  -- tells regexp to select productName that the string `ab` in their name stream of characters. 
+
 select productCode, productName, quantityInStock
 from products
 where productName regexp '19[6]';
